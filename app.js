@@ -11,7 +11,7 @@ const app = express(),
 
 //Import Controllers
 const indexRoutes = require('./controllers/index'),
-	modelRoutes = require('./controllers/modelController');
+	burgerRoutes = require('./controllers/burger');
 
 //---------------------------------------------
 // APP SET UP
@@ -30,7 +30,7 @@ app.set('view engine', 'handlebars');
 //---------------------------------------------
 
 app.use(indexRoutes);
-app.use(modelRoutes);
+app.use(burgerRoutes);
 
 //---------------------------------------------
 // 404 - PAGE NOT FOUND
