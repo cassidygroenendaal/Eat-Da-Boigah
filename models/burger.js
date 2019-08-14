@@ -9,8 +9,8 @@ const burger = {
 		dal.insertOne('burger', cols, vals, cb);
 	},
 
-	updateOne : function(obj1, obj2, cb) {
-		dal.updateOne('burger', obj1, obj2, cb);
+	updateOne : function(setVal, whereVal, cb) {
+		dal.updateOne('burger', setVal, whereVal, cb);
 	}
 };
 
