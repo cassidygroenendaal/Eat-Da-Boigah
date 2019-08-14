@@ -5,8 +5,8 @@ const burger = {
 		dal.selectAll('burger', cb);
 	},
 
-	insertOne : function(cols, vals, cb) {
-		dal.insertOne('burger', cols, vals, cb);
+	insertOne : function(vals, cb) {
+		dal.insertOne('burger', vals, cb);
 	},
 
 	updateOne : function(setVal, whereVal, cb) {

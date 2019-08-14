@@ -3,7 +3,7 @@ CREATE DATABASE burgers_db;
 USE burgers_db;
 
 CREATE TABLE burger (
-  id INT auto_increment primary key,
-  burger_name varchar(30),
-  devoured boolean
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  burger_name VARCHAR(30),
+  devoured BOOLEAN DEFAULT FALSE
 );

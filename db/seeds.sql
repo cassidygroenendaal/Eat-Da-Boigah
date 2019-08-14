@@ -1,6 +1,6 @@
 INSERT INTO 
-  burger (burger_name, devoured)
+  burger (burger_name)
 VALUES
-  ("The Which", true),
-  ("#1 Boigah", true),
-  ("Baconator", false);
+  ("The Which"),
+  ("#1 Boigah"),
+  ("Baconator");

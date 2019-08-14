@@ -1,6 +1,6 @@
 $(document).ready(() => {
 	//Change burger state
-	$('.btn-state').click(function() {
+	$('.js-btn-state').click(function() {
 		let id = $(this).data('id');
 		let nextState = $(this).data('next-state');
 		let updatedBurger = {
@@ -11,10 +11,20 @@ $(document).ready(() => {
 			type : 'PUT',
 			data : updatedBurger
 		}).then(() => {
-			console.log(`changes state of burger ${id} to ${nextState}.`);
 			location.reload();
 		});
 	});
 
 	//Add new burger
+	$('#js-btn-submit').click(function() {
+		let newBurger = {
+			burger_name : $('#js-input-name').val().trim()
+		};
+		$.ajax('/api/burger', {
+			type : 'POST',
+			data : newBurger
+		}).then(() => {
+			location.reload();
+		});
+	});
 });

@@ -9,15 +9,15 @@ router.get('/', (req, res) => {
 	});
 });
 
-// router.post('/api/burger', (req, res) => {
-// 	burger.insertOne(cols, vals, (data) => {
-// 		if (result.changedRows == 0) {
-// 			return res.status(404).end();
-// 		} else {
-// 			res.status(200).end();
-// 		}
-// 	});
-// });
+router.post('/api/burger', (req, res) => {
+	burger.insertOne(req.body, (data) => {
+		if (data.changedRows == 0) {
+			return res.status(404).end();
+		} else {
+			res.status(200).end();
+		}
+	});
+});
 
 router.put('/api/burger/:id', (req, res) => {
 	let setVal = { devoured: req.body.nextState };

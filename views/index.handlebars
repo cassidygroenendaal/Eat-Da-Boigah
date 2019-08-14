@@ -1,19 +1,25 @@
-<h1>Hi, I'm the index page!</h1>
+<h1>Hi, welcome to Eat-da-Boigah, may I take your order?</h1>
+
+<h2>Add a Boigah</h2>
+<form>
+  <input type="text" name="name" id="js-input-name">
+  <input type="submit" id="js-btn-submit" value="Add Da Boigah">
+</form>
 
 <h2>BOIGAHS IN STOCK</h2>
-<ul>
+<ol>
   {{#each burgers}}
   {{#unless devoured}}
   {{> burger/burger-block next-state=1}}
   {{/unless}}
   {{/each}}
-</ul>
+</ol>
 
 <h2>BOIGAHS DEVOURED</h2>
-<ul>
+<ol>
   {{#each burgers}}
   {{#if devoured}}
   {{> burger/burger-block next-state=0}}
   {{/if}}
   {{/each}}
-</ul>
+</ol>
