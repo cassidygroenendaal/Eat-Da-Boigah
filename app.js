@@ -10,8 +10,7 @@ const app = express(),
 	PORT = process.env.PORT || 8080;
 
 //Import Controllers
-const indexRoutes = require('./controllers/index'),
-	burgerRoutes = require('./controllers/burger');
+const burgerRoutes = require('./controllers/burger');
 
 //---------------------------------------------
 // APP SET UP
@@ -29,7 +28,6 @@ app.set('view engine', 'handlebars');
 // ROUTING
 //---------------------------------------------
 
-app.use(indexRoutes);
 app.use(burgerRoutes);
 
 //---------------------------------------------

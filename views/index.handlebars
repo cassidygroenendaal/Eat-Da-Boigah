@@ -1,1 +1,19 @@
 <h1>Hi, I'm the index page!</h1>
+
+<h2>BOIGAHS IN STOCK</h2>
+<ul>
+  {{#each burgers}}
+  {{#unless devoured}}
+  {{> burger/burger-block}}
+  {{/unless}}
+  {{/each}}
+</ul>
+
+<h2>BOIGAHS DEVOURED</h2>
+<ul>
+  {{#each burgers}}
+  {{#if devoured}}
+  {{> burger/burger-block}}
+  {{/if}}
+  {{/each}}
+</ul>
